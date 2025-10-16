@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro - Modo Oscuro</title>
+    <style>
+        body {
+            font-family: "Poppins", Arial, sans-serif;
+            background: linear-gradient(135deg, #141E30, #243B55);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #f1f1f1;
+        }
+
+        table {
+            background-color: #1f2a3b;
+            border-collapse: collapse;
+            width: 450px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+
+        caption {
+            background-color: #0d6efd;
+            color: white;
+            padding: 15px;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        td {
+            padding: 12px 15px;
+        }
+
+        td:first-child {
+            width: 40%;
+            text-align: right;
+            font-weight: bold;
+            color: #cfd8dc;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        select,
+        textarea {
+            width: 95%;
+            padding: 7px;
+            border: 1px solid #444;
+            border-radius: 5px;
+            background-color: #2c3e50;
+            color: #f1f1f1;
+            transition: 0.3s;
+        }
+
+        input:focus, textarea:focus, select:focus {
+            border-color: #0d6efd;
+            box-shadow: 0 0 5px rgba(13, 110, 253, 0.5);
+            outline: none;
+        }
+
+        .botones {
+            text-align: center;
+            background-color: #17212b;
+            padding: 15px;
+        }
+
+        button {
+            background-color: #0d6efd;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            margin: 5px;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        button:hover {
+            background-color: #084298;
+            transform: scale(1.05);
+        }
+
+        .genero label {
+            margin-right: 10px;
+            color: #e0e0e0;
+        }
+
+        select option {
+            background-color: #2c3e50;
+        }
+    </style>
+</head>
+<body>
+    <form action="#" method="post">
+        <table>
+            <caption>Formulario de Registro</caption>
+            <tr>
+                <td><label for="nombre">Nombre completo:</label></td>
+                <td><input type="text" id="nombre" name="nombre" required></td>
+            </tr>
+            <tr>
+                <td><label for="correo">Correo electrónico:</label></td>
+                <td><input type="email" id="correo" name="correo" required></td>
+            </tr>
+            <tr>
+                <td><label for="clave">Contraseña:</label></td>
+                <td><input type="password" id="clave" name="clave" required></td>
+            </tr>
+            <tr>
+                <td>Género:</td>
+                <td class="genero">
+                    <input type="radio" id="masculino" name="genero" value="Masculino">
+                    <label for="masculino">Masculino</label>
+                    <input type="radio" id="femenino" name="genero" value="Femenino">
+                    <label for="femenino">Femenino</label>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="ciudad">Ciudad:</label></td>
+                <td>
+                    <select id="ciudad" name="ciudad">
+                        <option value="">Seleccione...</option>
+                        <option value="Bogotá">Bogotá</option>
+                        <option value="Medellín">Medellín</option>
+                        <option value="Cali">Cali</option>
+                        <option value="Barranquilla">Barranquilla</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="comentario">Comentario:</label></td>
+                <td><textarea id="comentario" name="comentario" rows="3"></textarea></td>
+            </tr>
+            <tr>
+                <td colspan="2" class="botones">
+                    <button type="submit">Enviar</button>
+                    <button type="reset">Limpiar</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
+
